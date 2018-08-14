@@ -13,7 +13,7 @@ RUN go get github.com/go-errors/errors && \
     go get github.com/fsnotify/fsnotify && \
     go get github.com/arduino/arduino-builder && \
     go build github.com/arduino/arduino-builder/arduino-builder
-RUN wget https://downloads.arduino.cc/arduino-${ARDUINO_VER}-linux64.tar.xz && \
+RUN curl -s -o arduino-${ARDUINO_VER}-linux64.tar.xz https://downloads.arduino.cc/arduino-${ARDUINO_VER}-linux64.tar.xz && \
     tar -xf arduino-${ARDUINO_VER}-linux64.tar.xz && \
     mv arduino-${ARDUINO_VER} arduino-ide
 RUN mkdir -p /arduino-ide/hardware/esp8266com && \
