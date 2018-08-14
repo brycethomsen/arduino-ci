@@ -4,9 +4,9 @@ services:
   - docker
 
 before_install:
-- docker build --target builder -t arduino-builder-test .
-- docker run -it arduino-builder-test go test github.com/arduino/arduino-builder/... -timeout 60m
-- docker build -t arduino-builder-test .
+  - docker build -t arduino-builder-test .
+# - docker build --target builder -t arduino-builder-test .
+# - docker run -it arduino-builder-test go test github.com/arduino/arduino-builder/... -timeout 60m
 
 script:
   - docker run -it -v $PWD/tests:/sketch arduino-ci
