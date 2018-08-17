@@ -1,0 +1,1 @@
+esp8266com:esp8266:nodemcuv2:CpuFrequency=80,UploadSpeed=115200,FlashSize=4M1M,LwIPVariant=v2mss536
