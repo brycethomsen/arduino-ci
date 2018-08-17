@@ -12,4 +12,5 @@ before_install:
 # - docker run -it arduino-builder-test go test github.com/arduino/arduino-builder/... -timeout 60m
 
 script:
-  - docker run -it -v $PWD/tests:/sketch arduino-ci
+  - docker run --rm -v $PWD/tests/arduino:/sketch arduino-ci
+  - docker run --rm -v $PWD/tests/esp8266:/sketch arduino-ci
